@@ -1,9 +1,19 @@
 ;;求和的高阶函数
+;递归计算过程
 (define (sum term a next b) 
     (if (> a b) 
         0
         (+ (term a) (sum term (next a) next b))))
-        
+
+
+;;迭代计算过程
+(define (sum term a next b) 
+    (define (iter a result)
+        (if (> a b) 
+            result 
+            (iter (next a) (+ result (term a)))))
+    (iter a 0))
+
 
 ;;求函数f在a到b上的积分
 (define (integral f a b dx) 
