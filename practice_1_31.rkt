@@ -29,7 +29,7 @@
         (/ (+ x 2) (+ x 1))
         (/ (+ x 1) (+ x 2))))
     (define (next x) (+ x 1))
-    (* 1.0 (product term 1 next n)))
+    (* 1.0 (product term 1 next n)));;这一步主要是让输出不为有理数形式
     
     
 ;;结果
