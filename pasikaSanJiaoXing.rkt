@@ -19,9 +19,9 @@
                   (else (cons (nlist-iter s before-list)
                             (pasika-n-list-iter (- s 1) before-list)))))
 
-        (cond ((= n 1) (list 1))
-              ((= n 2) (list 1 1))
-              (else (pasika-n-list-iter n (pasika-n-list (- n 1))))))
+            (cond ((= n 1) (list 1))
+                  ((= n 2) (list 1 1))
+                  (else (pasika-n-list-iter n (pasika-n-list (- n 1))))))
 
 
         
