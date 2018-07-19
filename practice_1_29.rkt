@@ -3,11 +3,13 @@
     (if (> a b) 
         0
         (+ (term a) (sum term (next a) next b))))
+        
 
 ;;求函数f在a到b上的积分
 (define (integral f a b dx) 
     (define (add-dx x) (+ x dx))
     (* dx (sum f (+ a (/ dx 2)) add-dx b)))
+    
     
 ;;用辛普森规则求积分    
 (define (Simpson-integral f a b n)
@@ -21,10 +23,12 @@
     (define (next z) 
         (+ z 1))
         
-        (* (/ h 3)
-           (+ (term 0) 
-              (term n) 
-              (sum high-term 1 next (- n 1)))))
+    (* (/ h 3)
+       (+ (term 0) 
+          (term n) 
+          (sum high-term 1 next (- n 1)))))
+          
+          
 ;;立方函数
 (define (cube x) (* x x x))
 
